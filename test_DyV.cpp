@@ -36,5 +36,42 @@ int main(){
         std::cout << "Busqueda Binaria Inversa DOUBLE = " << BusquedaBinaria_INV(1.2, e, 0, 6) << std::endl;
         std::cout << "Busqueda Binaria Inversa CHAR = " << BusquedaBinaria_INV('t', f, 0, 6) << std::endl;
 
+	cout << endl;
+
+	std::vector<int> g{4, 2, 7, 5, 8, 1, 9, 3, 6};
+        std::vector<double> h{3.3, 7.7, 1.1, 8.8, 9.9, 2.2, 5.5, 4.4, 6.6};
+        std::vector<char> i{ 'i', 'h', 'e', 'a', 'f', 'c', 'b', 'd', 'g'};
+
+
+	cout << "Vector INT desordenado: ";
+        print_vector(g, 9);
+	
+	QuickSort(g, 0, 8);
+	
+	cout << "Vector INT ordenado: ";
+	print_vector(g, 9);
+	cout << endl;
+
+
+	cout << "Vector FLOAT desordenado: ";
+        print_vector(h, 9);
+
+	QuickSortINI(h, 0, 8);
+	
+	cout << "Vector FLOAT ordenado: ";
+	print_vector(h, 9);
+        cout << endl;
+
+
+	cout << "Vector CHAR desordenado: ";
+        print_vector(i, 9);	
+	
+	QuickSortMED(i, 0, 8);
+
+	
+	cout << "Vector CHAR ordenado: ";
+	print_vector(i, 9);
+        cout << endl;
+
 	return 0;
 }
