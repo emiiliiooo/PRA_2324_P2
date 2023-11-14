@@ -39,11 +39,23 @@ int mochila(std::vector<int>peso , int M,int tam, std::vector<int>& valor , int 
 	  	if(tabla[i][j]  == tabla[i-1][j])
 	    		i--;
 	  	else{
-			dev[i] = 1;
-			j = j -  peso[i];
+			dev[i-1] = 1;
+			j = j -  peso[i-1];
 			i--;
 	  	}
 	}
+
+
+/*	while(j > 0){
+		if(i > 1 && tabla[i][j] == tabla[i - 1][j])
+			i--;
+		else{
+			dev[i - 1] = 1;
+			j -= peso[i - 1];
+			i--;
+		}
+	}
+*/
 
 	return tabla[tam][M];
 	
